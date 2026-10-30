@@ -1,0 +1,367 @@
+/* ===== PENGATURAN DASAR ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #F3F6FA;
+  color: #263445;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 35px 25px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+
+  background: linear-gradient(135deg, #1B365D, #294F80);
+  color: #FFFFFF;
+
+  padding: 55px 25px;
+  border-radius: 16px;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 22px rgba(27, 54, 93, 0.15);
+}
+
+.header h1 {
+  color: #FFFFFF;
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.header p {
+  color: #DCE7F5;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== SECTION ===== */
+.section {
+  background-color: #FFFFFF;
+  padding: 28px;
+  border-radius: 14px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #E8EDF3;
+}
+
+.section h2 {
+  color: #1B365D;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0 0 22px;
+  padding-bottom: 13px;
+  border-bottom: 2px solid #E8EDF3;
+}
+
+/* ===== DAFTAR SKILL ===== */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== DAFTAR MATA KULIAH ===== */
+.matkul-list {
+  display: grid;
+  gap: 14px;
+}
+
+.matkul-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  padding: 17px 20px;
+  background-color: #F8FAFD;
+  border: 1px solid #E8EDF3;
+  border-left: 5px solid #1B365D;
+  border-radius: 9px;
+
+  transition: 0.2s ease;
+}
+
+.matkul-item:hover {
+  background-color: #F0F5FC;
+  transform: translateX(3px);
+}
+
+.matkul-kode {
+  font-weight: 700;
+  color: #1B365D;
+}
+
+.matkul-hari {
+  font-size: 13px;
+  color: #718096;
+  margin-top: 5px;
+}
+
+.matkul-sks {
+  background-color: #E8EFF8;
+  color: #1B365D;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== PORTOFOLIO PROYEK ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #FFFFFF;
+  border: 1px solid #E3EAF2;
+  border-radius: 12px;
+  padding: 25px;
+
+  min-height: 260px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(27, 54, 93, 0.10);
+}
+
+.project-card h3 {
+  color: #1B365D;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.project-card p {
+  color: #64748B;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 15px;
+}
+
+/* ===== TAG TEKNOLOGI ===== */
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 5px 0 22px;
+}
+
+.technology-tag {
+  background-color: #EAF1FB;
+  color: #24518A;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===== TOMBOL GITHUB ===== */
+.github-button {
+  display: inline-block;
+  margin-top: auto;
+
+  background-color: #1B365D;
+  color: #FFFFFF;
+
+  padding: 11px 17px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: background-color 0.2s ease;
+}
+
+.github-button:hover {
+  background-color: #365F91;
+}
+
+/* ===== TOMBOL INTERAKTIVITAS ===== */
+.interaction {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.interaction button {
+  background-color: #1B365D;
+  color: #FFFFFF;
+
+  padding: 13px 25px;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.interaction button:hover {
+  background-color: #365F91;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+
+  color: #718096;
+  font-size: 13px;
+  border-top: 1px solid #E1E8F0;
+}
+
+.footer p {
+  margin: 5px;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 700px) {
+  .container {
+    padding: 20px 14px;
+  }
+
+  .header {
+    padding: 38px 18px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .matkul-item {
+    padding: 13px;
+    align-items: flex-start;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+}
+
+
+/* ===== PROFIL MAHASISWA ===== */
+
+.profile-card {
+  max-width: 550px;
+  padding: 24px;
+  background: #FFFFFF;
+  border: 1px solid #E3EAF2;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.profile-image {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid #E8EFF8;
+  flex-shrink: 0;
+}
+
+.profile-info h3 {
+  color: #1B365D;
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.profile-info p {
+  color: #64748B;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.profile-info strong {
+  color: #1B365D;
+}
+
+.profile-status {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #E8EDF3;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge.active {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+.status-badge.inactive {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    gap: 14px;
+  }
+
+  .profile-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .profile-info h3 {
+    font-size: 16px;
+  }
+}
