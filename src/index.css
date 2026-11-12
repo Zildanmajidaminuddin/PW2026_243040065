@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+  color: #26334c;
+  background: #f3f6fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #2855c7;
+  --primary-dark: #173d9b;
+  --text-main: #26334c;
+  --text-muted: #929caf;
+  --surface: #ffffff;
+  --border: #e9edf5;
+  --background: #f3f6fc;
+  --success: #15986c;
+  --danger: #dc6471;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 90% 5%, #e3ebff 0, transparent 25%),
+    linear-gradient(135deg, #f7f9fe 0%, #f0f4fb 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #9db4f5;
+  outline-offset: 3px;
+}
+
+button {
+  transition: all 0.25s ease;
+}
+
+a {
+  transition: all 0.25s ease;
+}
+
+::selection {
+  color: #173c9b;
+  background: #dce6ff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cbd5e8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9eafd0;
+}
+
+/* Animasi halaman */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#root {
+  min-height: 100vh;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* Efek interaksi umum */
+.panel,
+.metric-card,
+.balance-card,
+.secure-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.panel:hover,
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(34, 61, 112, 0.07);
+}
+
+/* Tampilan input lebih modern */
+input,
+select,
+textarea {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Tombol */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Tampilan responsif */
+@media (max-width: 700px) {
+  body {
+    background: #f4f7fc;
+  }
+
+  #root {
+    animation-duration: 0.35s;
+  }
+}
+
+/* Mengurangi animasi jika diminta oleh perangkat */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
